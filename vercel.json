@@ -1,0 +1,19 @@
+{
+  "buildCommand": "npm --prefix frontend/create-my-app ci && npm --prefix frontend/create-my-app run build",
+  "outputDirectory": "frontend/create-my-app/dist",
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "backend/src/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

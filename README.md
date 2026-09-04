@@ -21,7 +21,11 @@ Zaika is a full-stack food discovery app: users scroll dish reels, explore resta
    npm run dev
    ```
 
-Open `http://localhost:5173`. Configure `VITE_API_URL` only if the API is hosted somewhere other than `http://localhost:3000/api`.
+Open `http://localhost:5173`. The Vite development server proxies `/api` requests to `http://localhost:3000`; the production Vercel deployment serves both from one domain.
+
+## Deploy to Vercel
+
+Import the GitHub repository in Vercel from its root directory. Set `MONGODB_URL`, `JWT_SECRET`, `IMAGEKIT_PUBLIC_KEY`, `IMAGEKIT_PRIVATE_KEY`, and `IMAGEKIT_URL_ENDPOINT` from `backend/.env` as encrypted production environment variables. Set `CLIENT_URL` to the final Vercel URL. Every push to `main` then triggers a new deployment.
 
 ## Included flows
 
