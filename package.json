@@ -1,0 +1,7 @@
+{
+  "name": "zaika",
+  "private": true,
+  "scripts": {
+    "sync:watch": "node scripts/github-auto-sync.cjs"
+  }
+}

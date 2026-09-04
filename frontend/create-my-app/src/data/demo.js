@@ -1,0 +1,9 @@
+export const DEMO_REELS = [
+  { _id: "demo-butter-chicken", name: "Smoky Butter Chicken", description: "Charred chicken, velvet makhani gravy and a little extra kasuri methi.", price: 329, category: "North Indian", likes: 2840, video: "https://ik.imagekit.io/sx8skx87f/f389f761-1479-4a75-8cce-e7165319d11b_CPqlKhUms", foodPartner: { _id: "demo-masala", restaurantName: "Masala Room" } },
+  { _id: "demo-pizza", name: "Truffle Mushroom Pizza", description: "48-hour fermented dough, mozzarella and earthy truffle oil.", price: 449, category: "Pizza", likes: 5120, video: "https://ik.imagekit.io/sx8skx87f/cc7af3f5-3e95-4864-b2f7-4101b09e96a9_jC70nkz3U", foodPartner: { _id: "demo-forno", restaurantName: "Forno 47" } },
+  { _id: "demo-momos", name: "Chilli Garlic Momos", description: "Pan-fried vegetable momos with a fiery house-made chilli crisp.", price: 189, category: "Asian", likes: 3980, video: "https://ik.imagekit.io/sx8skx87f/cda2acff-f6f8-4748-9124-3391b53ef7b5_i_7-cLpR2", foodPartner: { _id: "demo-nepal", restaurantName: "Momo Stories" } },
+  { _id: "demo-burger", name: "Double Smash Burger", description: "Two crisp-edged patties, sharp cheddar, pickles and Zaika sauce.", price: 279, category: "Burgers", likes: 9040, video: "https://ik.imagekit.io/sx8skx87f/f389f761-1479-4a75-8cce-e7165319d11b_CPqlKhUms", foodPartner: { _id: "demo-smash", restaurantName: "Smash District" } },
+  { _id: "demo-dessert", name: "Mango Tres Leches", description: "A chilled saffron milk cake crowned with Alphonso mango.", price: 219, category: "Desserts", likes: 1670, video: "https://ik.imagekit.io/sx8skx87f/cc7af3f5-3e95-4864-b2f7-4101b09e96a9_jC70nkz3U", foodPartner: { _id: "demo-sugar", restaurantName: "Sugar Street" } },
+];
+
+export const CATEGORIES = ["All", "North Indian", "Pizza", "Burgers", "Asian", "Desserts"];
