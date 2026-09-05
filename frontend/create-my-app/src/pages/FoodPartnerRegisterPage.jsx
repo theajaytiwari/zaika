@@ -7,7 +7,7 @@ function FoodPartnerRegisterPage() {
       action="Grow your"
       title="Register"
 
-        apiEndpoint={`${import.meta.env.VITE_API_BASE_URL}/api/auth/food-partner/register`}
+       apiEndpoint="https://zaika-lm4j.onrender.com/api/auth/food-partner/register"
         redirectTo="/FoodHome"
       subtitle="Create your partner profile to manage menu updates, orders, and delivery opportunities with ease."
             fields={[
