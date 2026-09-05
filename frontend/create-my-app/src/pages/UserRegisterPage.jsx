@@ -11,7 +11,7 @@ function UserRegisterPage() {
       action="Create your"
       title="Register"
 
-      apiEndpoint={`${import.meta.env.VITE_API_BASE_URL}/api/auth/user/register`}
+      apiEndpoint="https://zaika-lm4j.onrender.com/api/auth/user/register"
       redirectTo="/UserDataHome"
       subtitle="Join with your personal account to discover meals, favorites, and seamless ordering experiences."
       fields={[
