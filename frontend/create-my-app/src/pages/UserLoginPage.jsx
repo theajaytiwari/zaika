@@ -7,7 +7,7 @@ function UserLoginPage() {
       action="Welcome back to"
       title="Login"
 
-       apiEndpoint="http://localhost:3000/api/auth/user/login"
+       apiEndpoint={`${import.meta.env.VITE_API_BASE_URL}/api/auth/user/login`}
        redirectTo="/UserDataHome"
       subtitle="Access your saved preferences, recent orders, and favorite dining moments in one place."
       fields={[
