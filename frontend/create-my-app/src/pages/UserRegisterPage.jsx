@@ -12,6 +12,7 @@ function UserRegisterPage() {
       title="Register"
 
       apiEndpoint="https://zaika-lm4j.onrender.com/api/auth/user/register"
+      
       redirectTo="/UserDataHome"
       subtitle="Join with your personal account to discover meals, favorites, and seamless ordering experiences."
       fields={[
