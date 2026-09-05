@@ -8,7 +8,7 @@ function FoodPartnerLoginPage() {
       title="Login"
 
 
-      apiEndpoint="http://localhost:3000/api/auth/food-partner/login"
+      apiEndpoint={`${import.meta.env.VITE_API_BASE_URL}/api/auth/food-partner/login`}
       redirectTo="/FoodHome"
       
       subtitle="Review your menu, track orders, and stay connected with customers through a simple dashboard."
