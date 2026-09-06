@@ -1,5 +1,5 @@
 import AuthPage from './AuthPage';
-
+import { getApiUrl } from '../api/config';
 
 function UserRegisterPage() {
   
@@ -11,8 +11,8 @@ function UserRegisterPage() {
       action="Create your"
       title="Register"
 
-      apiEndpoint="https://zaika-lm4j.onrender.com/api/auth/user/register"
-      
+      apiEndpoint={getApiUrl('/auth/user/register')}
+
       redirectTo="/UserDataHome"
       subtitle="Join with your personal account to discover meals, favorites, and seamless ordering experiences."
       fields={[

@@ -1,9 +1,8 @@
 import axios from 'axios';
-
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+import { getApiUrl } from './config';
 
 export async function fetchMyUserProfile() {
-  const { data } = await axios.get(`${API_BASE_URL}/api/auth/user/me`, {
+  const { data } = await axios.get(getApiUrl('/auth/user/me'), {
     withCredentials: true,
   });
 
@@ -11,7 +10,7 @@ export async function fetchMyUserProfile() {
 }
 
 export async function logoutUser() {
-  await axios.get(`${API_BASE_URL}/api/auth/user/logout`, {
+  await axios.get(getApiUrl('/auth/user/logout'), {
     withCredentials: true,
   });
 }

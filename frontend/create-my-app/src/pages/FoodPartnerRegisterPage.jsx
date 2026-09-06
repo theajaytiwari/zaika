@@ -1,4 +1,5 @@
 import AuthPage from './AuthPage';
+import { getApiUrl } from '../api/config';
 
 function FoodPartnerRegisterPage() {
   return (
@@ -7,7 +8,7 @@ function FoodPartnerRegisterPage() {
       action="Grow your"
       title="Register"
 
-       apiEndpoint="https://zaika-lm4j.onrender.com/api/auth/food-partner/register"
+       apiEndpoint={getApiUrl('/auth/food-partner/register')}
         redirectTo="/FoodHome"
       subtitle="Create your partner profile to manage menu updates, orders, and delivery opportunities with ease."
             fields={[

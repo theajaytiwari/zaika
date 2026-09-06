@@ -1,4 +1,5 @@
 import AuthPage from './AuthPage';
+import { getApiUrl } from '../api/config';
 
 function FoodPartnerLoginPage() {
   return (
@@ -8,7 +9,7 @@ function FoodPartnerLoginPage() {
       title="Login"
 
 
-      apiEndpoint={`${import.meta.env.VITE_API_BASE_URL}/api/auth/food-partner/login`}
+      apiEndpoint={getApiUrl('/auth/food-partner/login')}
       redirectTo="/FoodHome"
       
       subtitle="Review your menu, track orders, and stay connected with customers through a simple dashboard."

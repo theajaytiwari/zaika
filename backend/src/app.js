@@ -8,9 +8,19 @@ const cartRoutes = require("./routes/cart.route");
 const orderRoutes = require("./routes/order.route");
 const cors = require('cors');
 
+const allowedOrigins = process.env.CLIENT_URL
+  ? process.env.CLIENT_URL.split(',').map((url) => url.trim().replace(/\/$/, ''))
+  : ["http://localhost:5173", "http://localhost:3000"];
+
 const app = express();
 app.use(cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, '')) || process.env.NODE_ENV !== 'production') {
+        callback(null, true);
+      } else {
+        callback(null, true);
+      }
+    },
     credentials: true
 }));
 app.use(cookieparser());
