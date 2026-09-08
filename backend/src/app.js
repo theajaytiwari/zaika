@@ -15,11 +15,14 @@ const allowedOrigins = process.env.CLIENT_URL
 const app = express();
 app.use(cors({
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin.replace(/\/$/, '')) || process.env.NODE_ENV !== 'production') {
-        callback(null, true);
-      } else {
-        callback(null, true);
-      }
+        if (
+            !origin ||
+            allowedOrigins.includes(origin.replace(/\/$/, ''))
+        ) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
     },
     credentials: true
 }));
